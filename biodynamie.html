@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodynamie</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: #f5f5f5; 
+            color: #333; 
+            font-family: "Georgia", serif; 
+            line-height: 1.8; 
+            text-align: center; 
+            padding-top: 50px;
+        }
+        .menu-toggle { 
+            position: absolute; 
+            top: 20px; 
+            right: 20px; 
+            cursor: pointer; 
+            z-index: 100; 
+        }
+        .bar { 
+            width: 30px; 
+            height: 4px; 
+            background-color: #333; 
+            margin: 6px 0; 
+        }
+        .menu { 
+            position: absolute; 
+            top: 0; 
+            right: -100%; 
+            width: 250px; 
+            height: 100vh; 
+            background: rgba(0, 0, 0, 0.9); 
+            transition: right 0.3s; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .menu a { 
+            color: white; 
+            text-decoration: none; 
+            font-size: 22px; 
+            margin: 15px 0; 
+        }
+        .menu.open { right: 0; }
+
+        h1 { 
+            font-size: 42px; 
+            margin-bottom: 30px; 
+            color: #444; 
+        }
+
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+        }
+
+        .text { 
+            font-size: 18px; 
+            padding: 20px; 
+            background: rgba(255, 255, 255, 0.9); 
+            border-radius: 12px; 
+            margin-bottom: 40px; 
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); 
+            color: #444; 
+            line-height: 1.6;
+        }
+
+        .image {
+            width: 100%;
+            height: 500px;
+            background: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        footer {
+            padding: 20px;
+            background: #333;
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 32px; }
+            .container { padding: 20px; }
+            .text { font-size: 16px; }
+            .image { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu toggle button -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Side menu -->
+    <div class="menu" id="menu">
+        <a href="index.html">Accueil</a>
+        <a href="histoire.html">Histoire</a>
+        <a href="biodynamie.html">Biodynamie</a>
+        <a href="vignes.html">Vignes</a>
+        <a href="cave.html">Cave</a>
+        <a href="vins.html">Vins</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Page content -->
+    <div class="container">
+        <h1>Biodynamie</h1>
+        <div class="text">
+            La biodynamie est une méthode de culture qui repose sur l’utilisation de préparations naturelles et le respect des cycles de la nature, comme les rythmes lunaires. Elle vise à renforcer la santé du sol et des plantes, en favorisant la biodiversité et l’équilibre de l’écosystème. Pour moi, la biodynamie est une évidence, d’une part après avoir dégusté des vins issus de cette méthode, mais aussi parce que ces pratiques sont, pour la plupart, des savoir-faire transmis de génération en génération, profondément ancrés dans les traditions agricoles.
+        </div>
+
+        <!-- Biodynamie Image -->
+        <div class="image">
+            <img src="images/Biodynamie.jpg" alt="Biodynamie">
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Domaine Olivier Dopke | Tous droits réservés</p>
+    </footer>
+
+    <script>
+        function toggleMenu() { 
+            document.getElementById('menu').classList.toggle('open'); 
+        }
+    </script>
+
+</body>
+</html>

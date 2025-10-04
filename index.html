@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            background: url('images/accueil.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .title {
+            position: absolute;
+            font-family: 'Times New Roman', serif;
+            font-size: 48px;
+            color: white;
+            text-align: center;
+        }
+        .menu-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .bar {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+        }
+        .menu {
+            position: absolute;
+            top: 0;
+            right: -100%;
+            width: 200px;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            transition: right 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 15px 0;
+            cursor: pointer;
+        }
+        .menu.open {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Les Mémoires</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="menu" id="menu">
+            <a href="histoire.html">Histoire</a>
+            <a href="biodynamie.html">Biodynamie</a>
+            <a href="vignes.html">Vignes</a>
+            <a href="cave.html">Cave</a>
+            <a href="vins.html">Vins</a>
+            <a href="equipe.html">Équipe</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

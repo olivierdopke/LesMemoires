@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f7f7f7; color: #333; font-family: "Arial", sans-serif; line-height: 1.6; }
+        .menu-toggle { position: absolute; top: 20px; right: 20px; cursor: pointer; }
+        .bar { width: 30px; height: 4px; background-color: #333; margin: 6px 0; }
+        .menu { position: absolute; top: 0; right: -100%; width: 250px; height: 100vh; background: rgba(0, 0, 0, 0.8); transition: right 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .menu a { color: white; text-decoration: none; font-size: 20px; margin: 15px 0; }
+        .menu.open { right: 0; }
+        .content { padding: 50px; max-width: 800px; margin: auto; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; }
+        h1 { font-size: 36px; margin-bottom: 30px; color: #333; }
+        p { font-size: 18px; line-height: 1.6; margin-bottom: 30px; color: #555; }
+        .contact-info { margin-bottom: 30px; }
+        .contact-info h2 { font-size: 24px; margin-bottom: 10px; color: #333; }
+        .contact-info p { font-size: 18px; color: #555; }
+        .form-container { margin-top: 30px; padding: 30px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); }
+        .form-container input, .form-container textarea { width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: 1px solid #ddd; }
+        .form-container button { background-color: #4CAF50; color: white; padding: 15px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; }
+        .form-container button:hover { background-color: #45a049; }
+        .form-container textarea { resize: vertical; height: 150px; }
+        .social-icons { margin-top: 20px; }
+        .social-icons a { margin: 0 15px; color: #4CAF50; font-size: 24px; text-decoration: none; }
+        .social-icons a:hover { color: #333; }
+    </style>
+</head>
+<body>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div class="menu" id="menu">
+        <a href="index.html">Accueil</a>
+        <a href="histoire.html">Histoire</a>
+        <a href="biodynamie.html">Biodynamie</a>
+        <a href="vignes.html">Vignes</a>
+        <a href="cave.html">Cave</a>
+        <a href="vins.html">Vins</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <div class="content">
+        <h1>Contact</h1>
+
+        <div class="contact-info">
+            <h2>Dopke Olivier</h2>
+            <p><strong>Téléphone :</strong> +41 79 505 81 98</p>
+            <p><strong>Email :</strong> <a href="mailto:olivier.dopke@example.com">olivier.dopke@example.com</a></p>
+            <p><strong>Instagram :</strong> <a href="https://instagram.com/olivier.dopke" target="_blank">olivier.dopke</a></p>
+        </div>
+
+
+
+        <div class="social-icons">
+            <h2>Suivez-nous</h2>
+            <a href="https://instagram.com/olivier.dopke" target="_blank">Instagram</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() { document.getElementById('menu').classList.toggle('open'); }
+    </script>
+</body>
+</html>
